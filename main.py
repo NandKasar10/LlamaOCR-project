@@ -160,7 +160,7 @@ if uploaded:
         st.image(pre_bytes, use_column_width=True)
 
         with st.spinner("🔍 Running Tesseract OCR..."):
-            tess_list = tesseract_candidates(pre_bytes)
+            tess_list = []
         st.info(f"Tesseract found {len(tess_list)} possible output(s).")
 
         with st.spinner("🤖 Querying LLaVA model..."):
